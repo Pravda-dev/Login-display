@@ -46,7 +46,7 @@
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QA7-8M-cb5">
                                         <rect key="frame" x="0.0" y="213.33333333333331" width="333" height="5"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="5" id="9Bu-0Q-Bg3"/>
                                         </constraints>
@@ -56,7 +56,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHw-Os-K0l">
                                                 <rect key="frame" x="0.0" y="50" width="333" height="4"/>
-                                                <color key="backgroundColor" red="0.23066255450248718" green="0.92118686437606812" blue="0.85919290781021118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="systemMintColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="lxd-D4-wcQ"/>
                                                 </constraints>
@@ -68,13 +68,13 @@
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="at.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EvI-At-wEs">
                                                 <rect key="frame" x="0.0" y="1" width="42" height="40.666666666666671"/>
-                                                <color key="tintColor" red="0.23066255450248718" green="0.92118686437606812" blue="0.85919290781021118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" systemColor="systemMintColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="EvI-At-wEs" secondAttribute="height" multiplier="1:1" id="ul4-5i-Lb0"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="PHg-ng-IY9" secondAttribute="trailing" id="8VI-Cf-tNH"/>
                                             <constraint firstAttribute="trailing" secondItem="fHw-Os-K0l" secondAttribute="trailing" id="IqZ-3Q-fQo"/>
@@ -93,7 +93,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sq-9W-KUx">
                                                 <rect key="frame" x="0.0" y="50" width="333" height="4"/>
-                                                <color key="backgroundColor" red="0.23066255450248718" green="0.92118686437606812" blue="0.85919290781021118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="systemMintColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="9Qc-14-bEn"/>
                                                 </constraints>
@@ -105,13 +105,13 @@
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yGr-QM-Amw">
                                                 <rect key="frame" x="0.0" y="1" width="42" height="40.666666666666671"/>
-                                                <color key="tintColor" red="0.23066255450248718" green="0.92118686437606812" blue="0.85919290781021118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" systemColor="systemMintColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="yGr-QM-Amw" secondAttribute="height" multiplier="1:1" id="NTF-hs-6s1"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="3Sq-9W-KUx" secondAttribute="bottom" id="2Mj-ZP-Rxi"/>
                                             <constraint firstItem="3Sq-9W-KUx" firstAttribute="top" secondItem="JPP-Vv-Da2" secondAttribute="bottom" constant="8" id="EP8-Fs-K7Z"/>
@@ -127,14 +127,14 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lry-Tu-VTd">
                                         <rect key="frame" x="0.0" y="362.33333333333331" width="333" height="25"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="XW9-7p-ox0"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3B-Uc-h1J">
                                         <rect key="frame" x="0.0" y="399.33333333333337" width="333" height="37"/>
-                                        <color key="backgroundColor" red="0.23066255450248718" green="0.92118686437606812" blue="0.85919290781021118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="k3B-Uc-h1J" secondAttribute="height" multiplier="9:1" id="ZTf-SR-0St"/>
                                         </constraints>
@@ -149,6 +149,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="62h-Q2-QSQ"/>
                                             <segue destination="etS-7E-09k" kind="show" id="E5P-v4-Ttx"/>
                                         </connections>
                                     </button>
@@ -165,14 +166,17 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JI4-Fe-JXi">
                                         <rect key="frame" x="151.66666666666669" y="0.0" width="107" height="31"/>
-                                        <color key="tintColor" red="0.23066255450248718" green="0.92118686437606812" blue="0.85919290781021118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemTealColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Signup here">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAF-rv-7ay"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstItem="z1g-VE-vpI" firstAttribute="top" secondItem="ea7-fv-DPJ" secondAttribute="top" id="1fB-jc-Vca"/>
                                     <constraint firstItem="JI4-Fe-JXi" firstAttribute="leading" secondItem="z1g-VE-vpI" secondAttribute="trailing" id="4O4-jz-p0X"/>
@@ -186,7 +190,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="ea7-fv-DPJ" firstAttribute="top" secondItem="Ims-N1-dxD" secondAttribute="bottom" constant="15" id="C3k-Vm-saL"/>
                             <constraint firstItem="Ims-N1-dxD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Rus-E6-emb"/>
@@ -196,6 +200,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3jv-Sq-Fuq"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="PHg-ng-IY9" id="F0A-cU-hEi"/>
+                        <outlet property="loginButton" destination="k3B-Uc-h1J" id="aZA-4m-Hb8"/>
+                        <outlet property="passTextField" destination="JPP-Vv-Da2" id="9ax-Wt-ZGm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,7 +218,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Qp0-M1-zgn"/>
-                        <color key="backgroundColor" red="0.23066255450248718" green="0.92118686437606812" blue="0.85919290781021118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Second" id="sWf-Tb-heO"/>
                 </viewController>
@@ -222,8 +231,14 @@
         <image name="at.circle.fill" catalog="system" width="128" height="123"/>
         <image name="lock.circle.fill" catalog="system" width="128" height="123"/>
         <image name="logo" width="201.33332824707031" height="201.33332824707031"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
