@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  login
+
+  Created by pravda on 23.07.2023.
+  
+*/
+
+"Error" = "Ошибка";
+"Wrong password or e-mail" = "Неправильный пароль или почта";
+"Again" = "Повторить";
+
