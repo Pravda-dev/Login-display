@@ -53,7 +53,6 @@ class ViewController: UIViewController {
         configureEmailLineView()
         configurePassLineView()
         configureLogoView()
-        
     }
     
     //MARK: - IBActions
@@ -114,7 +113,16 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
-              !text.isEmpty else { return }
+              !text.isEmpty else {
+            if textField == emailTextField {
+                emailLineView.backgroundColor = UIColor.systemMint
+                emailImageView.tintColor = UIColor.systemMint
+            } else if textField == passTextField {
+                passLineView.backgroundColor = UIColor.systemMint
+                lockImageView.tintColor = UIColor.systemMint
+            }
+            return
+        }
         switch textField {
         case emailTextField:
             let isValidEmail =  check(email: text)
@@ -123,7 +131,8 @@ extension ViewController: UITextFieldDelegate {
                 email = text
                 emailImageView.tintColor = passTextFieldColor
                 emailLineView.backgroundColor = passTextFieldColor
-            } else {
+            }
+            else {
                 email = ""
                 makeErrorField(textField: textField)
             }
@@ -138,7 +147,6 @@ extension ViewController: UITextFieldDelegate {
                 password = ""
                 makeErrorField(textField: textField)
             }
-            
         default:
             print("unknown texField")
         }
@@ -164,6 +172,5 @@ extension ViewController: UITextFieldDelegate {
             print("unknown texField")
         }
     }
-
 }
 
