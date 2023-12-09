@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passTextField: UITextField!
     
     //MARK: - Properties
+    var isLogin = true
     
     private let activeColor = UIColor(named: "shadowColor") ?? UIColor.systemGray4
     private let passTextFieldColor = UIColor(named: "passTextFieldColor")
@@ -46,33 +47,55 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dontHaveAccountLabel.isHidden = !isLogin
+        signupLabel.isHidden = !isLogin
+        
         configureButtonLogin()
         emailTextField.delegate = self
         passTextField.delegate = self
         emailTextField.becomeFirstResponder()
-        configureEmailLineView()
-        configurePassLineView()
-        configureLogoView()
+//        configureEmailLineView()
+//        configurePassLineView()
+//        configureLogoView()
     }
     
     //MARK: - IBActions
     @IBAction func signupAction(_ sender: Any) {
-        print("Signup")
+        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        viewController.isLogin = false
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     @IBAction private func loginAction(_ sender: Any) {
         emailTextField.resignFirstResponder()
         passTextField.resignFirstResponder()
         
-        if email == mockEmail,
-           password == mockPassword {
-            performSegue(withIdentifier: "goToHomePage", sender: sender)
+        if email.isEmpty {
+            makeErrorField(textField: emailTextField)
+        }
+        
+        if password.isEmpty {
+            makeErrorField(textField: passTextField)
+        }
+        
+        if isLogin {
+            if KeyChainManager.checkUser(with: email, password: password) {
+                performSegue(withIdentifier: "goToHomePage", sender: sender)
+            } else {
+                let alert = UIAlertController(title: "Error".localised, 
+                                              message: "Wrong password or e-mail".localised,
+                                              preferredStyle: .alert)
+                let action = UIAlertAction(title: "Again".localised , style: .cancel)
+                alert.addAction(action)
+                
+                present(alert, animated: true)
+            }
         } else {
-            let alert = UIAlertController(title: "Error".localised, message: "Wrong password or e-mail".localised, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Again".localised , style: .cancel)
-            alert.addAction(action)
-            
-            present(alert, animated: true)
+            if KeyChainManager.save(email: email, password: password) {
+                performSegue(withIdentifier: "goToHomePage", sender: sender)        
+            } else {
+                debugPrint("Error with saving email and password")
+            }
         }
     }
     
@@ -84,8 +107,12 @@ class ViewController: UIViewController {
         loginButton.layer.shadowOffset = CGSize(width: -0.4, height: 2.5)
         loginButton.layer.shadowOpacity = 0.7
         loginButton.layer.shadowRadius = 6
+        
         loginButton.isUserInteractionEnabled = false
         loginButton.backgroundColor = .systemGray4
+        
+        loginButton.setTitle(isLogin ? "Login".localised.uppercased() : "Register".localised.uppercased(), 
+                             for: .normal)
     }
     
     private func configureEmailLineView() {
@@ -173,4 +200,3 @@ extension ViewController: UITextFieldDelegate {
         }
     }
 }
-
